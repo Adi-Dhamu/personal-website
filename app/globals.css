@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ground: #ffffff;
+  --color-surface: #f4f4f6;
+  --color-ink: #0a0a0a;
+  --color-muted: #4b5563;
+  --color-accent: #b91c1c;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Literata', Georgia, serif;
+  background-color: var(--color-ground);
+  color: var(--color-ink);
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Taste-skill typography & layout discipline */
+h1, h2, h3, h4 {
+  font-family: 'Literata', Georgia, serif;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.tone-surface {
+  background-color: var(--color-surface);
+}
+
+.tone-dark {
+  background-color: #0d0e11;
+  color: #f6f7f9;
+}
+
+/* Taste-skill motion layer: staggered entrances that trigger animationstart */
+@keyframes enterUp {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-1  { animation: enterUp 0.6s 0.05s ease-out both; }
+.anim-2  { animation: enterUp 0.6s 0.10s ease-out both; }
+.anim-3  { animation: enterUp 0.6s 0.15s ease-out both; }
+.anim-4  { animation: enterUp 0.6s 0.20s ease-out both; }
+.anim-5  { animation: enterUp 0.6s 0.25s ease-out both; }
+.anim-6  { animation: enterUp 0.6s 0.30s ease-out both; }
+.anim-7  { animation: enterUp 0.6s 0.35s ease-out both; }
+.anim-8  { animation: enterUp 0.6s 0.40s ease-out both; }
+.anim-9  { animation: enterUp 0.6s 0.45s ease-out both; }
+.anim-10 { animation: enterUp 0.6s 0.50s ease-out both; }
+.anim-11 { animation: enterUp 0.6s 0.55s ease-out both; }
+.anim-12 { animation: enterUp 0.6s 0.60s ease-out both; }
+.anim-13 { animation: enterUp 0.6s 0.65s ease-out both; }
+.anim-14 { animation: enterUp 0.6s 0.70s ease-out both; }
+.anim-15 { animation: enterUp 0.6s 0.75s ease-out both; }
+.anim-16 { animation: enterUp 0.6s 0.80s ease-out both; }
+
+.hover-lift {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+input[type="range"] {
+  accent-color: #b91c1c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-1, .anim-2, .anim-3, .anim-4, .anim-5, .anim-6, .anim-7, .anim-8,
+  .anim-9, .anim-10, .anim-11, .anim-12, .anim-13, .anim-14, .anim-15, .anim-16,
+  .hover-lift {
+    animation: none;
+    transition: none;
+  }
+}
